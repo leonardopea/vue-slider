@@ -6,6 +6,7 @@ createApp({
     data(){
         return{
             activeImage: 0,
+            autoplay: null,
             slides : [
                 {
                     image: 'img/01.webp',
@@ -36,6 +37,9 @@ createApp({
 
         }
     },
+    created(){
+        this.auto()
+    },
     methods: {
 
         avanti(){
@@ -53,7 +57,14 @@ createApp({
         // funzione per cliccare sulle miniature ed avercele in immagine principale
         ImmaginePrincipale(index){
             this.activeImage=index;
+        },
+        // funzione per impostare autoplay
+        auto(){
+            this.autoplay = setInterval(() => {
+                this.avanti();
+            },1000);
         }
+
     },
 }).mount('#app');
 
