@@ -5,7 +5,7 @@ const { createApp} = Vue
 createApp({
     data(){
         return{
-            activeSlide: 0,
+            activeImage: 0,
             slides : [
                 {
                     image: 'img/01.webp',
