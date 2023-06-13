@@ -49,6 +49,10 @@ createApp({
             this.activeImage--;
             if(this.activeImage<0)
             this.activeImage=this.slides.length -1;
+        },
+        // funzione per cliccare sulle miniature ed avercele in immagine principale
+        ImmaginePrincipale(index){
+            this.activeImage=index;
         }
     },
 }).mount('#app');
